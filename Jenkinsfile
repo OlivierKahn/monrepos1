@@ -20,7 +20,7 @@ pipeline {
             }
              post {
                 success {
-                    junit 'monappli-domaine/target/surefire-reports/*.xml'
+                    junit './monappli-domaine/target/surefire-reports/*.xml'
                         }
                  }
             }
