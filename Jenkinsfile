@@ -6,11 +6,11 @@ pipeline {
 			steps {
 				bat 'cd monappli & mvn install'
 			}
-		 post {
-                success {
-                    junit 'monappli/monappli-domaine/target/surefire-reports/*.xml'
-                        }
-                 }
+			post {
+                		success {
+                		  junit 'monappli/monappli-domaine/target/surefire-reports/*.xml'
+                       		}	
+               		}
                
 		}
 	}
