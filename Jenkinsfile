@@ -16,11 +16,11 @@ pipeline {
 
         stage ('Build') {
             steps {
-                    bat 'cd . & mvn install'
+                    bat 'cd . & mvn test install'
             }
              post {
                 success {
-                    junit './monappli-domaine/target/surefire-reports/*.xml'
+                    junit 'monappli-domaine/target/surefire-reports/*.xml'
                         }
                  }
             }
